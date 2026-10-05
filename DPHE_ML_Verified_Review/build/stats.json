@@ -1,0 +1,526 @@
+{
+ "findings": [
+  "ANN/MLP is the dominant model family: 16 of 24 retained papers (67%) use it; GPR appears in only 1 paper (P03) despite most experimental datasets being small.",
+  "Validation is weak: 15 papers rely only on random splits and 5 report no clear validation; none of the 8 Tier 1 (double-pipe, experimental) papers used grouped, held-out-condition or external validation (count = 0).",
+  "Predictive uncertainty is reported by 2 of 24 papers (P37 - CFD; P27 - partial), and by none of the double-pipe papers.",
+  "Nusselt number is the most frequent thermal target (16 papers), followed by heat-transfer coefficient (6); effectiveness and NTU appear in 4 papers each, and no paper learns outlet temperatures.",
+  "Headline R/R2 >= 0.99 is reported by 12 papers; 11 of these rest on random splits or no clear validation, so high R2 is not evidence of generalisation.",
+  "Dataset size is not reported by 9 of 24 papers; among Tier 1 papers only P02 (84), P04 (540) and P05 (72) state n.",
+  "Physics enters the models rarely: 2 papers use physics-anchored or physics-structured learning (P27, P28 - both outside heat exchangers), while 9 use fully dimensionless inputs.",
+  "Hybrid nanofluids appear in 3 papers, and only one (P01, abstract only) concerns a double-pipe heat exchanger.",
+  "No retained study used cold-side inlet temperature as an input, and no double-pipe study varied both flow rates and both inlet temperatures together with concentration.",
+  "Multi-model comparisons are common (17 papers), but only P27 and P29 compare families under grouped validation; in P29 the correlation beat ML on unseen geometries (MAE 1,111 vs 1,819 W/m2K)."
+ ],
+ "charts": [
+  [
+   "A. Papers by publication year",
+   [
+    [
+     "2022",
+     1
+    ],
+    [
+     "2023",
+     4
+    ],
+    [
+     "2024",
+     8
+    ],
+    [
+     "2025",
+     6
+    ],
+    [
+     "2026",
+     5
+    ]
+   ]
+  ],
+  [
+   "B. Papers by Tier",
+   [
+    [
+     "Tier 1",
+     8
+    ],
+    [
+     "Tier 2",
+     8
+    ],
+    [
+     "Tier 3",
+     8
+    ]
+   ]
+  ],
+  [
+   "C. Papers by Evidence Level",
+   [
+    [
+     "A",
+     12
+    ],
+    [
+     "B",
+     10
+    ],
+    [
+     "C",
+     2
+    ]
+   ]
+  ],
+  [
+   "D. Papers by journal quartile",
+   [
+    [
+     "Not verified",
+     22
+    ],
+    [
+     "Q2",
+     2
+    ]
+   ]
+  ],
+  [
+   "E. Papers by heat-exchanger type",
+   [
+    [
+     "Double-pipe / concentric",
+     14
+    ],
+    [
+     "Tube / coil test section",
+     7
+    ],
+    [
+     "Other",
+     3
+    ]
+   ]
+  ],
+  [
+   "F. Papers by data source",
+   [
+    [
+     "Experimental",
+     18
+    ],
+    [
+     "CFD",
+     4
+    ],
+    [
+     "Analytical",
+     1
+    ],
+    [
+     "Mixed",
+     1
+    ]
+   ]
+  ],
+  [
+   "G. Papers by fluid type",
+   [
+    [
+     "Nanofluid",
+     12
+    ],
+    [
+     "Conventional fluid",
+     9
+    ],
+    [
+     "Hybrid nanofluid",
+     3
+    ]
+   ]
+  ],
+  [
+   "H. Papers by nanoparticle material",
+   [
+    [
+     "None (conventional fluid)",
+     9
+    ],
+    [
+     "Graphene family (GO/rGO/GNP)",
+     4
+    ],
+    [
+     "Al2O3",
+     3
+    ],
+    [
+     "Hybrid Al2O3-CuO",
+     2
+    ],
+    [
+     "MWCNT",
+     2
+    ],
+    [
+     "Fe3O4",
+     1
+    ],
+    [
+     "Hybrid Al2O3-TiO2",
+     1
+    ],
+    [
+     "Several (property-based, analytical)",
+     1
+    ],
+    [
+     "SiO2",
+     1
+    ]
+   ]
+  ],
+  [
+   "I. Frequency of ML model families",
+   [
+    [
+     "ANN/MLP",
+     16
+    ],
+    [
+     "Random Forest",
+     6
+    ],
+    [
+     "XGBoost",
+     6
+    ],
+    [
+     "Linear regression",
+     5
+    ],
+    [
+     "Polynomial regression",
+     5
+    ],
+    [
+     "Gradient Boosting",
+     4
+    ],
+    [
+     "SVR",
+     3
+    ],
+    [
+     "Hybrid metaheuristic (PSO/GA)",
+     3
+    ],
+    [
+     "ANFIS",
+     2
+    ],
+    [
+     "Deep learning",
+     2
+    ],
+    [
+     "Physics-informed / hybrid",
+     2
+    ],
+    [
+     "RBF network",
+     1
+    ],
+    [
+     "GPR",
+     1
+    ],
+    [
+     "Decision tree",
+     1
+    ],
+    [
+     "CatBoost",
+     1
+    ],
+    [
+     "AdaBoost",
+     1
+    ],
+    [
+     "Regularized linear (Ridge/Lasso/ElasticNet)",
+     1
+    ]
+   ]
+  ],
+  [
+   "J. Single-model vs multi-model comparison studies",
+   [
+    [
+     "Multi-model comparison",
+     17
+    ],
+    [
+     "Single model",
+     7
+    ]
+   ]
+  ],
+  [
+   "K. Frequency of input-variable categories",
+   [
+    [
+     "Reynolds number",
+     17
+    ],
+    [
+     "Geometry",
+     13
+    ],
+    [
+     "Concentration",
+     11
+    ],
+    [
+     "Dimensionless groups",
+     11
+    ],
+    [
+     "Thermophysical properties",
+     5
+    ],
+    [
+     "Prandtl number",
+     4
+    ],
+    [
+     "Hot inlet temperature",
+     3
+    ],
+    [
+     "Other operating variable",
+     3
+    ],
+    [
+     "Cold flow rate",
+     2
+    ],
+    [
+     "Flow rate (side unspecified)",
+     2
+    ],
+    [
+     "Hot flow rate",
+     1
+    ],
+    [
+     "Inlet temperature (side unspecified)",
+     1
+    ],
+    [
+     "Cold inlet temperature",
+     0
+    ]
+   ]
+  ],
+  [
+   "L. Frequency of predicted thermal outputs",
+   [
+    [
+     "Nusselt number",
+     16
+    ],
+    [
+     "Heat-transfer coefficient",
+     6
+    ],
+    [
+     "Effectiveness",
+     4
+    ],
+    [
+     "NTU",
+     4
+    ],
+    [
+     "Thermal performance factor",
+     3
+    ],
+    [
+     "Overall heat-transfer coefficient",
+     2
+    ],
+    [
+     "Entropy/exergy",
+     2
+    ],
+    [
+     "Other thermal output",
+     2
+    ],
+    [
+     "Heat-transfer rate",
+     1
+    ],
+    [
+     "Outlet temperatures",
+     0
+    ]
+   ]
+  ],
+  [
+   "M. Validation-method frequency",
+   [
+    [
+     "Random train/test split",
+     17
+    ],
+    [
+     "Random k-fold CV",
+     5
+    ],
+    [
+     "Grouped validation",
+     2
+    ],
+    [
+     "Leave-one-condition/group-out",
+     1
+    ],
+    [
+     "Leave-one-level-out (concentration/Re)",
+     0
+    ],
+    [
+     "External validation (separate dataset)",
+     2
+    ],
+    [
+     "Independent confirmation run",
+     2
+    ],
+    [
+     "Unclear / no validation",
+     5
+    ]
+   ]
+  ],
+  [
+   "N. Dataset-size distribution (ML samples)",
+   [
+    [
+     "<30",
+     0
+    ],
+    [
+     "30-60",
+     2
+    ],
+    [
+     "61-120",
+     4
+    ],
+    [
+     "121-250",
+     3
+    ],
+    [
+     ">250",
+     6
+    ],
+    [
+     "Not reported",
+     9
+    ]
+   ]
+  ],
+  [
+   "O. Predictive uncertainty reported",
+   [
+    [
+     "Yes",
+     2
+    ],
+    [
+     "No",
+     22
+    ]
+   ]
+  ],
+  [
+   "P. Physics-informed / correlation-anchored features",
+   [
+    [
+     "Yes",
+     2
+    ],
+    [
+     "No",
+     22
+    ]
+   ]
+  ],
+  [
+   "Q. Dimensionless input variables",
+   [
+    [
+     "Yes",
+     9
+    ],
+    [
+     "Partial",
+     10
+    ],
+    [
+     "No / not reported",
+     5
+    ]
+   ]
+  ],
+  [
+   "R. Reporting-quality analysis (papers reporting each item)",
+   [
+    [
+     "Dataset size",
+     15
+    ],
+    [
+     "Exact train/test split",
+     18
+    ],
+    [
+     "Hyperparameters",
+     16
+    ],
+    [
+     "Scaling method",
+     7
+    ],
+    [
+     "Exact input features",
+     20
+    ],
+    [
+     "Exact output variables",
+     23
+    ],
+    [
+     "Predictive uncertainty",
+     2
+    ],
+    [
+     "Independent validation",
+     6
+    ],
+    [
+     "Extrapolation testing",
+     5
+    ],
+    [
+     "Applicability-domain checking",
+     1
+    ]
+   ]
+  ]
+ ]
+}
